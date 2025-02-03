@@ -16,9 +16,9 @@ app.get('/', (req, res) => {
         message: "basic information",
         status: StatusCodes.OK,
         data:{
-            email:'adeyemitoluadedoyin@gmail.com',
-            currentDateTime: new Date().toISOString(),
-            gitHubUrl:'https://github.com/tolulope23-ops/publicApi.git'
+            email: 'adeyemitoluadedoyin@gmail.com',
+            current_datetime: new Date().toISOString(),
+            github_url:'https://github.com/tolulope23-ops/publicApi.git'
         }
     });
 });
