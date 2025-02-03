@@ -10,7 +10,7 @@ app.use(cors());
 
 const PORT = process.env.PORT || 3000;
 
-app.get('/api/basicInfo', (req, res) => {
+app.get('/', (req, res) => {
     res.status(200).json({
         success: true,
         message: "basic information",
