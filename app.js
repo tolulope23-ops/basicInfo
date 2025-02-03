@@ -11,15 +11,10 @@ app.use(cors());
 const PORT = process.env.PORT || 3000;
 
 app.get('/', (req, res) => {
-    res.status(200).json({
-        success: true,
-        message: "basic information",
-        status: StatusCodes.OK,
-        data:{
-            email: 'adeyemitoluadedoyin@gmail.com',
-            current_datetime: new Date().toISOString(),
-            github_url:'https://github.com/tolulope23-ops/publicApi.git'
-        }
+    res.status(StatusCodes.OK).json({
+        email: 'adeyemitoluadedoyin@gmail.com',
+        current_datetime: new Date().toISOString(),
+        github_url:'https://github.com/tolulope23-ops/publicApi.git'
     });
 });
 
