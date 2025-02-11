@@ -3,13 +3,18 @@ const app = express();
 const cors = require("cors");
 const {StatusCodes} = require('http-status-codes');
 
+// Load environment variables from .env file
 require("dotenv").config();
 
-app.use(express.json());
-app.use(cors());
+// Middlware to parse incoming JSON request
+app.use(express.json());  
+
+// Enable CORS to allow request from different origin
+app.use(cors());    
 
 const PORT = process.env.PORT || 3000;
 
+// Get route for public-basic-information-api
 app.get('/', (req, res) => {
     res.status(StatusCodes.OK).json({
         email: 'adeyemitoluadedoyin@gmail.com',
@@ -18,6 +23,7 @@ app.get('/', (req, res) => {
     });
 });
 
+// Start the server and listen on the defined port
 app.listen(PORT, () =>{
     console.log(`Server is listening on PORT ${PORT}`);
 })
